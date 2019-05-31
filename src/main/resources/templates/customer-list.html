@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Account</th>
+   	<th>Saldo</th>
+   	<th>IBAN</th>
+   	<th>Konto</th>
+    <th>Land</th>
+    <th>Anschrift</th>
+    <th>Nr.</th>
+   	<th>PLZ</th>
+   	<th>Ort</th>
+  </tr>
+<tr th:each="customer: ${customers}">
+    <td th:text="${customer.customerId}" />
+    <td th:text="${customer.customerPreName + ' ' + customer.customerLastName}" />
+    <td th:text="${customer.accountId}" />
+    <td th:text="${customer.currentBalance}" />
+    <td th:text="${customer.ibanNumber}" />
+    <td th:text="${customer.accountType}" />
+    <td th:text="${customer.countryCode}" />
+    <td th:text="${customer.street}" />
+    <td th:text="${customer.streetName}" />
+    <td th:text="${customer.streetNumber}" />
+    <td th:text="${customer.location}" />
+</tr>
+</table>
